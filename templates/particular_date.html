@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>weather</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light" style="background-color: rgba(255, 255, 128, .5);">
+    <h1 class="navbar-brand mb-0 h1>">weather on a particular date</h1>
+  </nav>
+  <br />
+  <br />
+  <center class="row">
+    <form method="post" class="col-md-6 col-md-offset-3">
+      <div class="input-group">
+        <input type="date" class="form-control" name="date" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color: rgba(255, 255, 128, .5);">
+            Search
+          </button>
+      </div>
+    </form>
+   </center>
+  <div class="row">
+    {% if data.address and data.timezone %}
+    <div class="col-md-6 col-md-offset-3">
+      <h3>address : {{data.address}}</h3>
+        <h5>timezone : {{data.timezone}}</h5>
+        <h5>datetime : {{data.datetime}}</h5>
+        <h5>temperature : {{data.temperature}}</h5>
+        <h5>conditions : {{data.conditions}}</h5>
+        <h5>description : {{data.description}}</h5>
+    </div>
+    {% endif %}
+  </div>
+</body>
+
+</html>
+

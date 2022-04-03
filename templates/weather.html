@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>weather</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light" style="background-color: rgba(255, 255, 128, .5);">
+    <h1 class="navbar-brand mb-0 h1>">weather forecast 5 days</h1>
+  </nav>
+  <br />
+  <br />
+  <center class="row">
+    <form method="post" class="col-md-6 col-md-offset-3">
+      <div class="input-group">
+        <input type="text" class="form-control" name="city" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color: rgba(255, 255, 128, .5);">
+            Search
+          </button>
+      </div>
+    </form>
+   </center>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+    {% for i in data: %}
+      <br>
+      {% for key, values in i.items(): %}
+        <p>{{key}} : {{values}}</p>
+      {% endfor %}
+    {% endfor %}
+    </div>
+  </div>
+</body>
+
+</html>
+
