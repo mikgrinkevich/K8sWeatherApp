@@ -14,10 +14,8 @@ from flask_login import (
 
 from oauthlib.oauth2 import WebApplicationClient
 import requests
-
 from db import init_db_command
 from user import User
-
 from datetime import date
 
 GOOGLE_CLIENT_ID = os.environ.get("GOOGLE_CLIENT_ID", None)
